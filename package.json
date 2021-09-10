@@ -1,0 +1,25 @@
+{
+    "name": "openqasm-language-server",
+    "displayName": "openqasm-language-server",
+    "description": "A language server for the OpenQASM language.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "qasm",
+            "aliases": ["OpenQASM", "qasm"],
+            "extensions": [".qasm",".inc"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "qasm",
+            "scopeName": "source.qasm",
+            "path": "./syntaxes/qasm.tmLanguage.json"
+        }]
+    }
+}
